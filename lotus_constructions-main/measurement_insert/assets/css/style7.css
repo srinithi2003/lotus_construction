@@ -1,0 +1,54 @@
+
+.split{
+    display:flex;
+    margin-right:60px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 350px;
+    
+  }
+ 
+ 
+  .split1{
+    margin-right: 50px;
+    width: 50%;
+    outline: none;
+    backdrop-filter: blur(50px);
+    font-size: 20px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .split2{
+    width: 50%;
+    height: 30px;
+    margin-right: 30px;
+    outline: none;
+    backdrop-filter: blur(50px);
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  body {
+    max-height: 100vh;
+    background-color:white;
+    background-image:url('https://a-static.besthdwallpaper.com/excavator-at-construction-site-with-yellow-color-on-black-and-white-cloudy-background-wallpaper-1920x1080-94576_48.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+
+
+ 
+  @media screen and (max-width:650px) {
+    .split{
+        margin-right: auto;
+        margin-left: 30px;
+    }
+    
+    
+  }

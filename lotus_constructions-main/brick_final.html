@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="measurement_insert/css/style1.css">
+</head>
+<body>
+    <div class="container mt-4">
+    <div class="brick-form">
+    <form  id="first">
+        <h3>Brick Works</h3>
+
+        <label for="siteid">Enter SiteId</label>
+        <input type="text" placeholder="Enter SiteId" id="site_id" >
+<br>
+        <label for="date">Enter Date</label>
+        <input type="date" id="dat">
+<br>
+        <label for="length">Enter Length</label>
+        <div class="split">
+        <input type="number" placeholder="in feet" id="l1" >
+        <input type="number" class="split1" placeholder="in inch" id="l2">
+        </div>
+
+        <label >Enter Breadth</label>
+        <div class="split">
+        <input type="number" placeholder="in feet" id="b1">
+        <input type="number" class="split1" placeholder="in inch" id="b2">
+        </div>
+
+        <label for="length">Enter Height</label>
+        <div class="split">
+        <input type="number" placeholder="in feet" id="h1">
+        <input type="number" class="split1" placeholder="in inch" id="h2">
+        </div>
+
+        <label for="number">Enter Nos</label>
+        <input type="number" placeholder="Enter Number" id="nos">
+
+        <!-- <label for="siteid">Upload site photos</label>
+        <input type="file" class="imageupload" name="name" multiple>
+
+        -->
+        
+
+       <h1  id="vol_div"  style="display: none;">   volume</h1>
+        <input type="number" id="vol" style="display: none;">
+    
+        <div class="split">
+        <input type="button " value="Calculate"  onclick="cal()">
+<br>
+         
+            <input type="button" onclick="pr()" value="print">
+
+
+
+       
+       
+    </form>
+  </div>
+</div>
+
+  <div id="p" style="display: none;" ><br><br>
+    <br><br>
+    <center>
+<h2>    Total volume of Brick calculation</h2>
+</center>
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <td>Site Name</td>
+            <td id="site"></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td id="d"></td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td id="ll"></td>
+        </tr>
+        <tr>
+            <td>Breadth</td>
+            <td id="bb"></td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td id="hh"></td>
+        </tr>
+        <tr>
+            <td>Total volume </td>
+            <td id="vv"></td>
+        </tr>
+    </table>
+ 
+</div>
+  <script>
+    
+    const butt=document.querySelector("#bb1");
+    
+    let l1,l2,h1,h2,b1,b3,volume=0;
+    let l=0,b=0,h=0;
+    let site_id=document.getElementById("site_id").value;
+    let dat=document.getElementById("dat").value;
+   // alert(site_id);
+    function cal(){
+    l1=Number(document.getElementById("l1").value);
+    l2=Number(document.getElementById("l2").value);
+    b1=Number(document.getElementById("b1").value);
+    b2=Number(document.getElementById("b2").value);
+    h1=Number(document.getElementById("h1").value);
+    h2=Number(document.getElementById("h2").value);
+    nos=Number(document.getElementById("nos").value);
+
+    if(l1==0  || b1==0  || h1==0 ||  nos==0){
+        alert("required");
+       // return false;
+    }
+  
+    //alert(h2/12);
+    l2=(l2/12);
+        b2=(b2/12);
+        h2=(h2/12);
+
+        l=(l1+l2);
+        b=(b1+b2);
+        h=(h1+h2);
+
+     //   alert(l);
+
+        // l=l/10;
+        // b=b/10;
+        // h=h/10;
+        // alert(l);
+        // alert(b);
+        // alert(h2);
+        volume=(nos*l*b*h);
+
+        //alert(volume);
+
+        // l=Math.round(l * 100) / 100
+        // b=Math.round(b * 100) / 100
+        // h=Math.round(h * 100) / 100
+
+        volume=Math.round(volume * 1000) / 1000;
+        
+       // alert(volume);
+        document.getElementById("vol").value=volume;
+        document.getElementById("vol_div").style.display="block";
+        document.getElementById("vol").style.display="block";
+        return false;
+    }
+
+    function pr(){
+        document.getElementById("site").innerHTML+=site_id;
+        document.getElementById("d").innerHTML+=dat;
+        document.getElementById("ll").innerText+=l+" feet";
+        document.getElementById("bb").innerText+=b+" feet";
+        document.getElementById("hh").innerText+=h+" feet";
+        document.getElementById("vv").innerText+=volume+" cubic feet";
+        document.getElementById("first").style.display="none";
+        document.getElementById("p").style.display="block";
+        window.print()
+       
+    }
+
+
+
+
+</script>
+</body>
+</html>

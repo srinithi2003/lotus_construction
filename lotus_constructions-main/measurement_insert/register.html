@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style5.css">
+</head>
+<style>
+    
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    max-height: 100vh;
+    background-color:white;
+    background-image:url('https://a-static.besthdwallpaper.com/excavator-at-construction-site-with-yellow-color-on-black-and-white-cloudy-background-wallpaper-1920x1080-94576_48.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+form {
+    width: 450px;
+    min-height: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin: 10% auto;
+   
+    padding: 2%;
+    background-image: linear-gradient(-225deg, orange 50%, #dddadc 50%);
+}
+
+
+header {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
+}
+
+header p {letter-spacing: 0.05em;}
+
+.input-item {
+    background: #fff;
+    color: #333;
+    padding: 14.5px 0px 15px 9px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+input[class="form-input"]{
+    width: 290px;
+    height: 50px;
+  
+    margin-top: 2%;
+    padding: 15px;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+    
+}
+input[id="txt-input"] {width: 290px;}
+
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+
+.split{
+  display:flex;
+  margin-left: 8px;
+   
+}
+
+.split1{
+  margin-left: 20px;
+  margin-right: 10px;
+  background-color:orange;
+ 
+}
+.split2{
+    background-color:white;
+}
+button {
+    display: inline-block;
+    color: #252537;
+  
+    width: 280px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+.frgt-pass {
+    background: transparent;
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+.sign-up {
+    background:#df8e0c;
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+    
+}
+
+
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+@media screen and (max-width:768px) {
+    .overlay{
+        padding: auto;
+    }
+    
+}
+
+</style>
+<body>
+    <div class="overlay">
+    
+        <!-- <form>
+            
+        <div class="con">
+    
+        <header class="head-form">
+            <h2>User Registration </h2>
+         
+        </header>
+
+        <br>
+        <div class="field-set">
+            
+               
+            
+            
+            <br>
+    
+             <span class="input-item">
+                <i class="fa fa-key"></i>
+            </span> -->
+            <!-- name<input class="form-input" id="name" type="text" placeholder="@UserName" required ><br>
+            age<input class="form-input" id="age" type="number" placeholder="@UserName" required ><br>
+            gender
+            <select id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select>
+          <br>
+            mail id<input class="form-input" id="mail" type="email" placeholder="@UserName" required><br>
+            dob<input class="form-input" id="dob" type="date" placeholder="@UserName"  required><br>
+            username<input class="form-input" id="username" type="text" placeholder="@UserName" required ><br>
+            password<input class="form-input" type="password" placeholder="Password" id="pass"  name="pass" required >
+            
+
+         
+            <br>
+    
+        </div>
+        
+    
+        <div class="other">
+    
+            <button class="frgt-pass">Already have account ?</button>
+
+           <button class="sign-up" id="register" >Register</button>
+    
+        </div>
+            
+
+        </div>
+        
+    
+        </form> --> 
+
+        <form>
+            
+            <div class="con">
+        
+            <header class="head-form">
+                <h2>User Registration</h2>
+            
+              
+            </header>
+    
+            <br>
+            <div class="field-set">
+                
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" id="name" type="text" placeholder="Name" required>
+                
+                <br>
+        
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" id="age" type="number" placeholder="Age" required >
+                
+                <br>
+                
+          
+         
+        
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" id="mail" type="email" placeholder="Email" required>
+                
+                <br>
+        
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" id="dob" type="date" placeholder="DOB"  required>
+                
+                <br>
+        
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" id="username" type="text" placeholder="UserName" required >
+                
+                <br>
+                <span class="input-item">
+                    <i class="fa fa-key"></i>
+                </span>
+                <span class="input-item">
+                    <i class="fa fa-user-circle"></i>
+                    </span>
+                
+                    <input class="form-input" type="password" placeholder="Password" id="pass"  name="pass" required>
+                
+                <br>
+        
+               
+                
+    
+                <span>
+                    <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+                </span>
+                
+                <br>
+        
+           
+            
+        
+                
+                <div class="split">
+                    <button type="button" class="btn btn-primary split2">Already have an account</button>
+                    <button type="button" id="register" class="btn btn-primary split1" value="login" id="register">Register</button>
+                </div>
+        </div>
+            </div>
+            
+        
+        </div>
+    
+    
+</body>
+
+<script>
+    const b1=document.getElementById("register");
+    b1.addEventListener('click',async()=>{
+        
+
+        var name=document.getElementById("name").value;
+        var age=document.getElementById("age").value;
+     
+        var dob=document.getElementById("dob").value;
+    
+        var mail=document.getElementById("mail").value;
+       
+        var username=document.getElementById("username").value;
+        
+        var pass=document.getElementById("pass").value;
+       
+        var data=JSON.stringify({name:name,age:age,dob:dob,email:mail,username:username,password:pass});
+        // alert(data);
+
+        await fetch('http://localhost:3010/user_create',{
+            mode:"cors",
+            method:"POST",
+            
+            headers:{
+            'Content-Type':'application/JSON'
+            },
+            body:data
+        })
+        .then(async(e)=>{
+            return e.json();
+        })
+        .then(async()=>{
+            alert("registered successfully");
+            window.location="/first";
+        })
+
+        .catch(async(err)=>{
+
+            alert("error "+err);
+        })
+
+    })
+</script>
+
+
+</html>

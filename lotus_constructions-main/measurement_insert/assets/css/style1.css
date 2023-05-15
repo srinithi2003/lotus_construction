@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+  max-height: 100vh;
+  background-color:white;
+  background-image: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.background{
+    width: auto;
+    height: auto;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+form{
+  margin-top: 100px;
+ 
+    height: 900px;
+    width: 550px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+   
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(200px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #dc3e09;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.split{
+  display:flex;
+  margin-left: 8px;
+}
+
+.split1{
+  margin-left: 20px;
+}
+
+.imageupload{
+  background: none;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}

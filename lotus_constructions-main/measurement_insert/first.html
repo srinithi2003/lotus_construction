@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Construction</title>
+    <script src="./login/login_user.js"></script>
+</head>
+
+<style>
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    max-height: 100vh;
+    background-color:white;
+    background-image: url('../images/constuction.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+li{
+    list-style:none;
+}
+
+a{ 
+    background-color: rgb(186, 74, 22);
+    color:white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+a:hover{
+   
+    padding: 0.6rem 1.5rem;
+
+}
+
+
+
+header{
+    position:relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+ 
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}
+
+.navbar .links {
+    
+    display:flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color:aliceblue;
+    font-size:1.5rem;
+    cursor:pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: red;
+    color:white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.action_btn:hover{
+    scale:1.05;
+    color:aliceblue;
+}
+
+.action_btn:active{
+    scale:0.95;
+}
+
+@media(max-width:992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display:none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display:block !important;
+    }
+}
+
+.dropdown_menu{
+    display:none;
+    position:absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow:hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li{
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width:100px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu.open{
+    height: 360px;
+}
+
+@media(max-width:576px){
+    .dropdown_menu{
+        display: block;
+        left: 2rem;
+        width:unset;
+    }
+}
+
+section#hero{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:aliceblue;
+}
+
+#hero h1{
+    font-size: 3rem;
+    
+}
+
+
+</style>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo"><b style="font-size: 28px; color: aliceblue; font-family: Cursive;">Lotus Construction</b></div>
+            
+            <ul class="links" >
+                <li><a  href="#"  style="text-decoration: none;color: white;">Home</a></li>
+                <li ><a href="./brickwork " style="text-decoration: none;color: white;" >Brick Work</a></li>
+                <li><a href="./Plasteringwork" style="text-decoration: none;color: white;" >Plastering Work</a></li>
+                <li><a href="./Paintwork" style="text-decoration: none;color: white;" >Paint Work</a></li>
+                <li><a href="./concretework" style="text-decoration: none;color: white;" >Concrete Work</a></li>
+               
+            </ul>
+
+            <div>
+                <input type="button" class="btn btn-primary" onclick="logout()" value="Logout"/>
+            </div>
+           
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#" >Home</a></li>
+                <li><a href="./brickwork" >Brick Work</a></li>
+                <li><a href="./Plasteringwork" >Plastering Work</a></li>
+                <li><a href="./Paintwork" >Paint Work</a></li>
+                <li><a href="./cementwork" >Concrete Work</a></li>
+                <li><input type="button" onclick="logout"></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Lotus Construction</h1>
+            
+        </section>
+    </main>
+
+    <script>
+
+        function logout(){
+            
+            if(localStorage.getItem('log_user')==1){
+                localStorage.clear();
+                alert("Session Expired. Kindly login again ")
+                window.location="./login_user"
+            }
+        }
+
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
